@@ -3,8 +3,9 @@
 #include <unistd.h>
 
 int main(int argc, char **argv) {
+    (void)argc;
 	int filedescript;
-	char bytelimit[2048] = {};
+	char bytelimit[] = {2048};
 	int bytes;
 
 	filedescript = open(argv[1], O_RDWR);
